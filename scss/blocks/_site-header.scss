@@ -1,0 +1,275 @@
+.site-header{
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 56px;
+  background-color: #ffffff;
+}
+
+.site-header__container{
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.site-header__tel-box{
+  display: flex;
+  align-items: center;
+}
+.site-header__tel-box::before{
+  content: "";
+  width: 29px;
+  height: 29px;
+  background-image: url("../img/phone.png");
+  background-repeat: no-repeat;
+  background-size: 29px 29px;
+  background-position: center;
+  margin-right: 7px;
+}
+
+.site-header__tel-lbox{
+text-decoration: none;
+display: inline-block;
+}
+
+.site-header__tel-lbox:hover{
+  opacity: 0.8;
+}
+.site-header__tel-lbox:active{
+  opacity: 0.6;
+}
+
+.site-header__tel-text{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: $dark;
+  margin: 0;
+  margin-bottom: 3px;
+}
+
+.site-header__tel-ttext{
+  margin: 0;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: $dark;
+}
+
+.site-header__time-box{
+  display: flex;
+  align-items: center;
+}
+.site-header__time-box::before{
+  content: "";
+  width: 32px;
+  height: 29px;
+  background-image: url("../img/clock.png");
+  background-position: center;
+  background-size: 29px 29px;
+  background-repeat: no-repeat;
+  margin-right: 7px;
+}
+
+.site-header__time-text{
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #00B007;
+}
+
+.site-header__time{
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: $dark;
+}
+
+.site-header__menu{
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #0055B8;
+  border-radius: 5px;
+  padding: 24px 30px 19px;
+  max-width: 1140px;
+}
+
+.site-header__menu-logo{
+  display: none;
+  vertical-align: middle;
+}
+.site-header__menu-logo:hover{
+  opacity: 0.8;
+}
+.site-header__menu-logo:active{
+  opacity: 0.6;
+}
+
+.site-header__mlogo-img{
+  vertical-align: middle;
+}
+
+
+.site-header__social-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+.site-header__social-item {
+  margin-right: 13px;
+}
+.site-header__social-link:hover{
+  opacity: 0.6;
+}
+
+.site-header__toggler{
+  display: none;
+}
+
+@media only screen and (max-width: 1025px){
+
+  .site-header{
+    padding: 0;
+  }
+
+  .site-header__container{
+    display: none;
+  }
+
+  .site-header__menu{
+    transform: translate(-50%, 100%);
+  }
+
+  .site-header__menu-logo{
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 840px){
+
+  .site-header__menu{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .site-header__menu-logo{
+    margin-bottom: 17px;
+  }
+
+  .site-header__sitenav{
+    margin-bottom: 13px;
+  }
+}
+
+@media only screen and (max-width: 550px){
+
+  .site-header__menu{
+    flex-direction: row;
+    border-radius: 0;
+    position: relative;
+    transform: translatey(0%);
+    left: 0;
+    top: 0;
+    padding-bottom: 26px;
+  }
+
+  .site-header__menu-logo{
+    margin: 0;
+    margin-right: 13px;
+  }
+
+  .site-header__sitenav{
+    display: none;
+  }
+
+  .site-header__social-list{
+    display: none;
+  }
+
+  .site-header__toggler{
+    position: relative;
+    z-index: 1;
+    display: block;
+    border: none;
+    padding: 0;
+    width: 20px;
+    height: 17px;
+    background-color: transparent;
+    margin-left: auto;
+    background-image: url("../img/open.svg");
+    background-size: 20px 17px;
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+
+  .site-header--open{
+
+    &.site-header{
+      position: relative;
+      margin-bottom: -74px;
+      background-color: transparent;
+    }
+  }
+
+  .site-header--open .site-header__menu{
+    transform: translatey(-74px);
+  }
+
+  .site-header--open .site-header__toggler{
+    background-image: url("../img/close.svg");
+    z-index: 30;
+  }
+
+  .site-header--open .site-header__sitenav{
+    display: block;
+    width: 100%;
+    margin-bottom: 63px;
+  }
+
+  .site-header--open .sitenav__list{
+    position: relative;
+    margin-top: 24px;
+  }
+
+  .site-header--open .site-header__social-list{
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+}
+
+
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+
+  .site-header__tel-box::before{
+    background-image: url("../img/phone@2x.png");
+  }
+
+  .site-header__time-box::before{
+    background-image: url("../img/clock@2x.png");
+  }
+
+}
