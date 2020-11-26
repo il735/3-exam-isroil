@@ -134,7 +134,8 @@
 }
 
 .location__map-link {
-  display: block;
+  display: inline-block;
+  margin-left: calc(50% - 950px);
 }
 
 .location__map-img {
@@ -157,6 +158,10 @@
   .location__text{
     padding-right: 36px;
     padding-left: 36px;
+  }
+
+  .location__map-link{
+    margin-left: 0;
   }
 
   .location__map-img{
