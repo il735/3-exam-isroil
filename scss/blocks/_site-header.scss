@@ -25,7 +25,7 @@
   content: "";
   width: 29px;
   height: 29px;
-  background-image: url("../img/phone.png");
+  background-image: url("../optimized-imgs/phone.png");
   background-repeat: no-repeat;
   background-size: 29px 29px;
   background-position: center;
@@ -69,7 +69,7 @@ display: inline-block;
   content: "";
   width: 32px;
   height: 29px;
-  background-image: url("../img/clock.png");
+  background-image: url("../optimized-imgs/clock.png");
   background-position: center;
   background-size: 29px 29px;
   background-repeat: no-repeat;
@@ -103,7 +103,7 @@ display: inline-block;
   flex-wrap: wrap;
   background-color: #0055B8;
   border-radius: 5px;
-  padding: 24px 30px 19px;
+  padding: 21px 30px 19px;
   max-width: 1140px;
 }
 
@@ -130,11 +130,43 @@ display: inline-block;
   display: flex;
   align-items: center;
 }
-.site-header__social-item {
+.site-header__social-item:not(:last-child){
   margin-right: 13px;
 }
+
+.site-header__social-link{
+  display: block;
+  width: 28px;
+  height: 28px;
+
+  &--vk{
+    background-image: url("../optimized-imgs/vk.png");
+    background-repeat: no-repeat;
+    background-size: 28px 28px;
+    background-position: center;
+  }
+  &--insta{
+    background-image: url("../optimized-imgs/instagram.png");
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: center;
+  }
+  &--twitter{
+    background-image: url("../optimized-imgs/twitter.png");
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-position: center;
+  }
+}
 .site-header__social-link:hover{
+  opacity: 0.8;
+}
+.site-header__social-link:active{
   opacity: 0.6;
+}
+
+.site-header__social-img{
+  display: block;
 }
 
 .site-header__toggler{
@@ -211,7 +243,7 @@ display: inline-block;
     height: 17px;
     background-color: transparent;
     margin-left: auto;
-    background-image: url("../img/open.svg");
+    background-image: url("../optimized-imgs/open.svg");
     background-size: 20px 17px;
     background-repeat: no-repeat;
     background-position: right center;
@@ -231,7 +263,7 @@ display: inline-block;
   }
 
   .site-header--open .site-header__toggler{
-    background-image: url("../img/close.svg");
+    background-image: url("../optimized-imgs/close.svg");
     z-index: 30;
   }
 
@@ -252,6 +284,28 @@ display: inline-block;
     margin-left: auto;
   }
 
+
+  .site-header--nojs{
+    &.site-header{
+      position: relative;
+      margin-top: -74px;
+      background-color: transparent;
+    }
+  }
+  .site-header--nojs .site-header__sitenav{
+    display: block;
+    width: 100%;
+  }
+  .site-header--nojs .sitenav__list{
+    position: relative;
+    margin-top: 24px;
+  }
+  .site-header--nojs .site-header__social-list{
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
 }
 
 
@@ -265,11 +319,23 @@ only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
 
   .site-header__tel-box::before{
-    background-image: url("../img/phone@2x.png");
+    background-image: url("../optimized-imgs/phone@2x.png");
   }
 
   .site-header__time-box::before{
-    background-image: url("../img/clock@2x.png");
+    background-image: url("../optimized-imgs/clock@2x.png");
+  }
+
+  .site-header__social-link{
+    &--vk{
+      background-image: url("../optimized-imgs/vk@2x.png");
+    }
+    &--insta{
+      background-image: url("../optimized-imgs/instagram@2x.png");
+    }
+    &--twitter{
+      background-image: url("../optimized-imgs/twitter@2x.png");
+    }
   }
 
 }
