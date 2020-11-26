@@ -90,7 +90,7 @@
         </div>
       </div>
 
-      <ul class="hero__list">
+      <ul class="hero__list" aria-label="List of dentists">
         <li class="hero__item">
           <picture>
             <source media="(max-width:375px)" type="image/webp" srcset="optimized-imgs/smiling-girl-375-webp.webp 1x, optimized-imgs/smiling-girl-375-webp@2x.webp 2x">
@@ -157,6 +157,37 @@
           </div>
         </li>
       </ul>
+    </section>
+
+    <section class="appointment">
+      <div class="appointment__container container">
+
+        <div class="appointment__features-box">
+          <div class="appointment__treatment">
+            <h3 class="appointment__treatment-heading">Treatment</h3>
+            <p class="appointment__treatment-text">All types of dental treatment are carried out using the most modern technologies.</p>
+          </div>
+          <div class="appointment__prosthetics">
+            <h3 class="appointment__prosthetics-heading">Prosthetics</h3>
+            <p class="appointment__prosthetics-text">We will help you find the most convenient and aesthetically attractive version of the prosthesis.</p>
+          </div>
+        </div>
+
+        <form class="appointment__form" action="https://echo.htmlacademy.ru" method="POST">
+          <h3 class="apointment__form-heading">Appointment</h3>
+          <input class="appointment__input" type="name" name="name" aria-label="Name" placeholder="Name" required>
+          <input class="appointment__input" type="tel" name="phone_number" aria-label="Phone number" placeholder="Phone" pattern="^(?:(?:\(?(?:00|\+)([1-4]\d\d|[1-9]\d?)\)?)?[\-\.\ \\\/]?)?((?:\(?\d{1,}\)?[\-\.\ \\\/]?){0,})(?:[\-\.\ \\\/]?(?:#|ext\.?|extension|x)[\-\.\ \\\/]?(\d+))?$" required>
+
+          <button class="appointment__btn" type="submit">Appointment</button>
+
+          <label class="appointment__label">
+            <input class="appointment__checkbox visually-hidden" type="checkbox" name="agreement" aria-label="Agreement" required>
+            <span class="appointment__text">I give my consent to the storage and processing of personal data</span>
+            <span class="appointment__checking"></span>
+          </label>
+        </form>
+
+      </div>
     </section>
 
   </main>

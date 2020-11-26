@@ -19,7 +19,7 @@
   height: 70px;
 
   &--back{
-    background-color: #ffd600;
+    background-color: $yellow;
     width: 42px;
     background-image: url("../optimized-imgs/back.png");
     background-repeat: no-repeat;
@@ -29,7 +29,7 @@
 
   &--next{
     width: 70px;
-    background-color: #ffd600;
+    background-color: $yellow;
     background-image: url("../optimized-imgs/next.png");
     background-repeat: no-repeat;
     background-size: 23px 23px;
@@ -130,6 +130,7 @@
     text-align: center;
     align-items: center;
     margin-top: 21px;
+    margin-bottom: 17px;
   }
 
   .hero__btn-box{

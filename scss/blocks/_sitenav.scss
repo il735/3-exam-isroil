@@ -31,7 +31,7 @@
     left: 0;
     top: 100%;
     width: 100%;
-    background-color: #0055B8;
+    background-color: $dblue;
     flex-direction: column;
     text-align: center;
   }
@@ -43,13 +43,13 @@
   }
 
   .sitenav__item{
-    background: #0055B8;
-    border-top: 1px solid #FFD600;
+    background: $dblue;
+    border-top: 1px solid $yellow;
     margin-right: -30px;
     margin-left: -30px;
 
     &:last-child{
-      border-bottom: 1px solid #FFD600;
+      border-bottom: 1px solid $yellow;
     }
   }
 
@@ -59,7 +59,7 @@
   }
 
   .sitenav__link:hover{
-    background-color: #FFD600;
-    color: #0055B8;
+    background-color: $yellow;
+    color: $dblue;
   }
 }
