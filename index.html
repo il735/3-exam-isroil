@@ -162,19 +162,19 @@
     <section class="appointment">
       <div class="appointment__container container">
 
-        <div class="appointment__features-box">
-          <div class="appointment__treatment">
+        <ul class="appointment__features-box">
+          <li class="appointment__treatment">
             <h3 class="appointment__treatment-heading">Treatment</h3>
             <p class="appointment__treatment-text">All types of dental treatment are carried out using the most modern technologies.</p>
-          </div>
-          <div class="appointment__prosthetics">
+          </li>
+          <li class="appointment__prosthetics">
             <h3 class="appointment__prosthetics-heading">Prosthetics</h3>
             <p class="appointment__prosthetics-text">We will help you find the most convenient and aesthetically attractive version of the prosthesis.</p>
-          </div>
-        </div>
+          </li>
+        </ul>
 
         <form class="appointment__form" action="https://echo.htmlacademy.ru" method="POST">
-          <h3 class="apointment__form-heading">Appointment</h3>
+          <h3 class="appointment__form-heading">Appointment</h3>
           <input class="appointment__input" type="name" name="name" aria-label="Name" placeholder="Name" required>
           <input class="appointment__input" type="tel" name="phone_number" aria-label="Phone number" placeholder="Phone" pattern="^(?:(?:\(?(?:00|\+)([1-4]\d\d|[1-9]\d?)\)?)?[\-\.\ \\\/]?)?((?:\(?\d{1,}\)?[\-\.\ \\\/]?){0,})(?:[\-\.\ \\\/]?(?:#|ext\.?|extension|x)[\-\.\ \\\/]?(\d+))?$" required>
 
@@ -188,6 +188,36 @@
         </form>
 
       </div>
+    </section>
+
+    <section class="location">
+      <div class="location__container container">
+
+          <form class="location__form" action="https://echo.htmlacademy.ru" method="POST">
+            <h3 class="location__form-heading">Appointment</h3>
+            <input class="location__input" type="name" name="name" aria-label="Name" placeholder="Name" required>
+            <input class="location__input" type="tel" name="phone_number" aria-label="Phone number" placeholder="Phone" pattern="^(?:(?:\(?(?:00|\+)([1-4]\d\d|[1-9]\d?)\)?)?[\-\.\ \\\/]?)?((?:\(?\d{1,}\)?[\-\.\ \\\/]?){0,})(?:[\-\.\ \\\/]?(?:#|ext\.?|extension|x)[\-\.\ \\\/]?(\d+))?$" required>
+
+            <button class="location__btn" type="submit">Appointment</button>
+
+            <label class="location__label">
+              <input class="location__checkbox visually-hidden" type="checkbox" name="agreement" aria-label="Agreement" required>
+              <span class="location__checkbox-text">I give my consent to the storage and processing of personal data</span>
+              <span class="location__checking"></span>
+            </label>
+          </form>
+
+          <div class="location__content-box">
+            <h2 class="location__heading">Convenient location and working hours</h2>
+            <p class="location__text">Our clinic is located in the center of the Sverdlovsk district, at the address: Raboche-Krestyanskaya Street 6. From the bus stop “Family” hypermarket to our dental clinic - 5 minutes on foot.</p>
+          </div>
+
+      </div>
+
+      <a class="location__map-link" href="https://yandex.uz/maps/-/CCUEECh5TD">
+        <img class="location__map-img" src="optimized-imgs/map.png" alt="Location map" width="1920" height="760" srcset="optimized-imgs/map.png 1x, optimized-imgs/map@2x.png 2x">
+      </a>
+
     </section>
 
   </main>

@@ -5,6 +5,9 @@
 
 .appointment__features-box{
   display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 .appointment__treatment{
@@ -96,7 +99,7 @@
   width: 540px;
 }
 
-.apointment__form-heading{
+.appointment__form-heading{
   margin-top: 0;
   margin-bottom: 29px;
   font-weight: 500;
@@ -241,13 +244,16 @@
   .appointment__features-box{
     display: none;
   }
+
+  .appointment__text{
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 376px){
 
   .appointment__form{
-    padding-left: 17px;
-    padding-right: 17px;
+    padding: 25px 24px;
   }
 
   .appointment__btn{
@@ -258,9 +264,10 @@
 @media only screen and (max-width: 365px){
 
   .appointment__text{
-    max-width: 210px;
+    width: 100%;
     font-size: 15px;
     line-height: 18px;
+    margin-right: 7px;
   }
 }
 

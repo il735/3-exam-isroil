@@ -1059,6 +1059,10 @@ img {
 }
 
 @media only screen and (max-width: 550px) {
+  .hero__container {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
   .hero__bg-img {
     width: 750px;
     height: 352px;
@@ -1112,6 +1116,9 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 .appointment__treatment {
@@ -1210,7 +1217,7 @@ img {
   width: 540px;
 }
 
-.apointment__form-heading {
+.appointment__form-heading {
   margin-top: 0;
   margin-bottom: 29px;
   font-weight: 500;
@@ -1351,12 +1358,14 @@ img {
   .appointment__features-box {
     display: none;
   }
+  .appointment__text {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 376px) {
   .appointment__form {
-    padding-left: 17px;
-    padding-right: 17px;
+    padding: 25px 24px;
   }
   .appointment__btn {
     width: 100%;
@@ -1365,9 +1374,10 @@ img {
 
 @media only screen and (max-width: 365px) {
   .appointment__text {
-    max-width: 210px;
+    width: 100%;
     font-size: 15px;
     line-height: 18px;
+    margin-right: 7px;
   }
 }
 
@@ -1377,6 +1387,228 @@ img {
   }
   .appointment__prosthetics-heading::before {
     background-image: url("../optimized-imgs/zubi@2x.png");
+  }
+}
+
+.location__container {
+  position: relative;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.location__form {
+  position: absolute;
+  z-index: 10;
+  left: 20px;
+  top: 290px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 48px 35px 66px 42px;
+  background-color: #0055B8;
+  border-radius: 5px;
+  width: 540px;
+}
+
+.location__form-heading {
+  margin-top: 0;
+  margin-bottom: 29px;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  color: #fff;
+}
+
+.location__input {
+  width: 100%;
+  border: 1px solid #fff;
+  background-color: #0055B8;
+  border-radius: 5px;
+  padding: 20px 15px;
+  margin-bottom: 12px;
+  outline: 0;
+}
+
+.location__input:focus {
+  background-color: #fff;
+  border: 1px solid #0055B8;
+}
+
+.location__btn {
+  width: 230px;
+  padding: 17px 63px;
+  border: 0;
+  border-radius: 5px;
+  background-color: #FFD600;
+  cursor: pointer;
+  margin-bottom: 22px;
+}
+
+.location__btn:hover {
+  opacity: 0.8;
+}
+
+.location__btn:active {
+  opacity: 0.6;
+}
+
+.location__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.location__checkbox-text {
+  max-width: 256px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: #fff;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.location__checking {
+  width: 35px;
+  height: 35px;
+  display: block;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.location__checkbox:focus ~ .location__checking {
+  -webkit-box-shadow: 0 0 0 2px greenyellow;
+          box-shadow: 0 0 0 2px greenyellow;
+}
+
+.location__checkbox:checked ~ .location__checking {
+  background-image: url("../optimized-imgs/check.svg");
+  background-size: contain 21px 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.location__content-box {
+  max-width: 879px;
+  text-align: center;
+  background-image: url("../optimized-imgs/text-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 275px 152px;
+}
+
+.location__content-box::before {
+  content: "";
+  width: 50px;
+  height: 0;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #FFD600;
+  border: 3px solid #FFD600;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.location__heading {
+  margin-top: 0;
+  margin-bottom: 13px;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  color: #272727;
+}
+
+.location__text {
+  margin-top: 0;
+  margin-bottom: 27px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+  color: #4D4D4D;
+}
+
+.location__map-link {
+  display: block;
+}
+
+.location__map-img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media only screen and (max-width: 1025px) {
+  .location__container {
+    padding: 0;
+  }
+  .location__heading {
+    padding-right: 7px;
+    padding-left: 7px;
+    margin-bottom: 16px;
+  }
+  .location__text {
+    padding-right: 36px;
+    padding-left: 36px;
+  }
+  .location__map-img {
+    -o-object-position: -570px;
+       object-position: -570px;
+  }
+}
+
+@media only screen and (max-width: 667px) {
+  .location__form {
+    position: static;
+    width: 100%;
+  }
+  .location__content-box::before {
+    margin-top: 83px;
+  }
+  .location__map-img {
+    -o-object-position: -1100px;
+       object-position: -1100px;
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  .location__map-img {
+    -o-object-position: -1200px;
+       object-position: -1200px;
+  }
+  .location__form {
+    padding: 48px 24px 53px;
+  }
+  .location__btn {
+    width: 100%;
+  }
+  .location__checkbox-text {
+    width: 100%;
+    font-size: 15px;
+    line-height: 18px;
+    margin-right: 13px;
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .location__content-box {
+    background-image: url("../optimized-imgs/text-bg@2x.png");
   }
 }
 /*# sourceMappingURL=styles.css.map */
