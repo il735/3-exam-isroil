@@ -1,0 +1,239 @@
+.team{
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.team__container{
+  position: relative;
+  z-index: 1;
+}
+
+.team__btn{
+  position: absolute;
+  z-index: 1;
+  width: 42px;
+  height: 49px;
+  margin: 0;
+  padding: 0;
+  border: 2px solid #1D6ECB;
+  border-radius: 5px;
+  background-color: #fff;
+  outline: 0;
+
+  &--back{
+    background-image: url("../optimized-imgs/next-back-btn.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 21px 21px;
+    transform: rotate(180deg);
+    left: 20px;
+    top: 50%;
+
+    &:hover{
+      box-shadow: rgba(0, 0, 0, 0.2) 0px -5px 3px 0px, rgba(0, 0, 0, 0.05) 0px -5px 3px 0px;
+    }
+  }
+
+  &--next{
+    background-image: url("../optimized-imgs/next-back-btn.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 21px 21px;
+    right: 20px;
+    top: 50%;
+
+    &:hover{
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 3px 0px, rgba(0, 0, 0, 0.05) 0px 5px 3px 0px;
+    }
+  }
+
+  &:active{
+    opacity: 0.6;
+  }
+}
+
+.team__content-box{
+  max-width: 890px;
+  text-align: center;
+  background-image: url("../optimized-imgs/text-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 275px 110px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 21px;
+  display: flex;
+  flex-direction: column;
+}
+.team__content-box::before{
+  content: "";
+  width: 50px;
+  height: 0;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: $yellow;
+  border: 3px solid $yellow;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.team__heading{
+  margin-top: 0;
+  margin-bottom: 13px;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  color: $dark;
+}
+
+.team__text{
+  margin-top: 0;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+  color: $light;
+}
+
+.team__list{
+  max-width: 1003px;
+  padding: 0;
+  margin: 0;
+  margin-right: auto;
+  margin-left: auto;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.team__item{
+  display: flex;
+  flex-direction: column;
+
+  &:not(:last-child){
+    margin-right: 9px;
+  }
+}
+
+.team__list-heading{
+  margin-top: 0;
+  margin-bottom: 5px;
+  order: 1;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000;
+}
+
+.team__list-text{
+  margin: 0;
+  order: 2;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000;
+}
+
+.team__list-img{
+  order: 0;
+  margin-bottom: 15px;
+  object-fit: contain;
+}
+
+.team__item--none{
+  display: none;
+}
+
+@media only screen and (max-width: 1140px){
+
+  .team__list{
+    justify-content: center;
+  }
+
+  .team__list-img{
+    object-fit: none;
+    max-width: 270px;
+  }
+}
+
+@media only screen and (max-width: 1025px){
+
+  .team__list{
+    max-width: 845px;
+    justify-content: space-between;
+  }
+
+  .team__list-img{
+    max-width: 252px;
+  }
+}
+
+@media only screen and (max-width: 980px){
+
+  .team__content-box{
+    margin-right: 13px;
+    margin-bottom: 7px;
+  }
+
+  .team__list{
+    overflow-x: scroll;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .team__item{
+    flex-shrink: 0;
+
+    &:not(:last-child){
+      margin-right: 40px;
+    }
+  }
+
+  .team__item--none{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .team__list-img{
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+  }
+
+  .team__btn{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 870px){
+
+  .team__container{
+    padding-right: 0;
+  }
+}
+
+@media only screen and (max-width: 476px){
+
+  .team__item{
+    width: 252px;
+  }
+
+  .team__list-img{
+    width: 252px;
+  }
+}
+
+
+
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+
+  .team__content-box{
+    background-image: url("../optimized-imgs/text-bg@2x.png");
+  }
+}
