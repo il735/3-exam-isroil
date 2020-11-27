@@ -19,6 +19,7 @@
   border-radius: 5px;
   background-color: #fff;
   outline: 0;
+  top: 50%;
 
   &--back{
     background-image: url("../optimized-imgs/next-back-btn.svg");
@@ -27,7 +28,6 @@
     background-size: 21px 21px;
     transform: rotate(180deg);
     left: 20px;
-    top: 50%;
 
     &:hover{
       box-shadow: rgba(0, 0, 0, 0.2) 0px -5px 3px 0px, rgba(0, 0, 0, 0.05) 0px -5px 3px 0px;
@@ -40,7 +40,6 @@
     background-repeat: no-repeat;
     background-size: 21px 21px;
     right: 20px;
-    top: 50%;
 
     &:hover{
       box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 3px 0px, rgba(0, 0, 0, 0.05) 0px 5px 3px 0px;
