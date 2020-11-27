@@ -1541,7 +1541,7 @@ img {
   margin-right: 35px;
 }
 
-.services__item:nth-child(4n) {
+.services__item--chdentist {
   margin-right: 0;
 }
 
@@ -1665,15 +1665,24 @@ img {
 }
 
 @media only screen and (max-width: 1025px) {
-  .services__item:nth-child(4n) {
+  .services__item--chdentist {
     display: none;
   }
-  .services__item:nth-child(3n) {
+  .services__item--diagnostics {
     margin-right: 0;
   }
 }
 
 @media only screen and (max-width: 800px) {
+  .services__item--diagnostics {
+    display: none;
+  }
+  .services__item--hygiene {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 610px) {
   .services__list {
     overflow-x: scroll;
     padding-top: 35px;
@@ -1688,14 +1697,21 @@ img {
     display: -ms-flexbox;
     display: flex;
   }
-  .services__item:nth-child(4n) {
+  .services__item--chdentist {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin-right: 35px;
   }
-  .services__item:nth-child(3n) {
+  .services__item--diagnostics {
     margin-right: 35px;
+  }
+  .services__content-box {
+    margin-bottom: 10px;
+    max-width: 290px;
+  }
+  .services__text {
+    margin: 0;
   }
   .services__btn {
     display: none;
